@@ -1,0 +1,465 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+@import url('../node_modules/primeng/resources/primeng.css');
+
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+    --red:#cf1919f9;
+    --primary-color:#ff6b6b;
+    --secondary-color:#794afa;
+    --secondary-dark-color:#453c5c;
+    
+    --white-color:#ffffff;
+    --light-bg-color:#f2f3f5;
+    --light-text-color:#7c899a;
+    --border-color:#e5e8ec;
+    --dark-color:#0a021c;
+
+    --font-small:13px;
+    --font-samller:11px;
+
+    --percent100: 100%;
+    --percent50: 50%;
+
+    --fw3: 300;
+    --fw4: 400;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+
+    --trans-background-color: background-color .3s , color .3s;
+    --trans-background: background-color .3s;
+    --trans-color: color .3s;
+
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik' , sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark-color);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: var(--percent100);
+    vertical-align: middle;
+}
+strong{
+    font-weight: var(--fw8);
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input::placeholder{
+    font:inherit;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Poppins';
+}
+h1{
+   
+    font-weight:var(--fw8);
+    line-height: 1;
+}
+h2{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 1.2em;
+    font-weight: var(--fw7);
+}
+h4{
+    font-size: 1em;
+    font-weight: var(--fw6);
+}
+
+
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.938em;
+}
+.column{
+    margin-left: -0.938em;
+    margin-right: -0.938em;
+}
+.column .row{
+    padding: 0 0.938em;
+}
+.flexwrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .flexitem{
+    display: flex;
+    align-items: center;
+  
+}
+.flexcol{
+    /* display: flex; */
+    flex-direction: column;
+    gap: 1em;
+}
+.main-link a:hover{
+    color: var(--secondary-color);
+}
+.second-links a:hover{
+    color: var(--secondary-color);
+}
+.icon-small, .icon-large{
+    display: flex;
+    align-items: center;
+    padding: 0 0.25em;
+    font-weight: normal;
+}
+.icon-small{
+    font-size: 1.25em;
+    margin: auto;
+}
+.icon-large{
+    font-size: 1.75em;
+    padding: 0 0.75em 0 0;
+}
+.mobile-hide{
+    display: none;
+}
+.object-cover img {
+    position: absolute;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+.products .media img {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.products .media {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.primary-button, .secondary-button, .light-button{
+    font-size: var(--font-small);
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transition: var(--trans-background-color);
+}
+.primary-button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.primary-button:hover{
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.secondary-button:hover{
+    background-color: var(--light-bg-color);
+    color: var(--secondary-dark-color);
+}
+.light-button{
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.view-all{
+    font-size: var(--font-small);
+    display: flex;
+    gap: 1em;
+    transition: var(--trans-color);
+}
+
+
+.header-nav {
+    padding: 0.5em 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+ }
+
+.trigger {
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em;
+    margin-right: 0.5em;
+}
+
+.logo a{
+    font-family: 'Poppins';
+    font-size: 1.75em;
+    position: relative;
+    font-weight: var(--fw8);
+    display: flex;
+    padding-left: 0.75em;
+    margin-right:2em ;
+}
+.circle{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--percent50);
+    background-color: var(--light-bg-color);
+    z-index: 1;
+}
+.circle::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--percent50);
+    background-color: var(--secondary-color);
+    bottom: 5px;
+    right: 5px;
+    opacity: .4;
+}
+.header-nav nav > ul{
+    line-height: 100px;
+    gap:2em;
+}
+.fly-item{
+    position: absolute;
+    height: 16px;
+    font-size: var(--font-samller);
+    padding: 3px;
+    text-align: center;
+    line-height: 10px;
+    color: var(--white-color);
+}
+nav .fly-item,
+.header-nav .mini-cart .price .fly-item{
+    top: 50%;
+    margin-top: -24px;
+    width: 30px;
+    border-radius: 3px;
+    right: -32px;
+    background-color: var(--primary-color);
+}
+.header-nav .right{
+    position: relative;
+    margin-left: auto;
+}
+.header-nav .right .icon-large{
+    position: relative;
+}
+.header-nav .right .fly-item{
+    top: 0;
+    right: 16px;
+    width: 16px;
+    background-color: var(--secondary-dark-color);
+    border-radius:var(--percent50) ;
+}
+.mega .flexcol{
+    flex: 1;
+    min-width: 180px;
+    padding-right: 2.5em;
+    margin-bottom: 1.5em;
+    z-index: 1;
+}
+
+.products .discount::before{
+    background-color: var(--dark-color);
+}
+.products .discount span{
+    position: relative;
+    font-size: var(--font-samller);
+    font-weight: var(--fw5);
+    color: var(--white-color);
+}
+/* reponsive */
+@media screen and(min-width: 481px) {
+    .products.main .item{
+        flex: 0 0 50%;
+    }
+    /* page single */
+    .products.one .big-image{
+        margin-bottom: 2em;
+    }
+    .products.one .image-show{
+        height: 680px;
+    }
+    .products.one .thumbnail-show{
+        height: 160px;
+    }
+    .products.one .big-image{
+    margin-bottom: 2em;
+}
+.products.one .image-show{
+    height: 680px;
+}
+.products.one .thumbnail-show{
+    height: 160px;
+}
+    
+}
+
+@media screen and(min-width:768px){
+    .products .price .current{
+        font-size: 1.25em;
+    }
+    .products.mini {
+        flex: 0 0 50%;
+    }
+    .products.main .item{
+        flex: 0 0 33.3333%;
+    }
+    .products.one .row{
+        flex: 0 0 50%;
+        width: 50%;
+    }
+    
+   
+}
+
+@media screen and (min-width:992px){
+    
+    .container{
+        padding: 0 2em;
+    }
+    .desktop-hide{
+        display: none;
+    }
+    .mobile-hide{
+        display: block;
+    }
+    .logo a {
+        margin-right: 2em;
+    }
+    .header-nav{
+        padding: 0;
+        margin: 0;
+        border-bottom: 0;
+    }
+    .header-nav .right li > a{
+        margin-left: 1em;
+    }
+
+    /* mega menu */
+    nav .mega{
+        position: absolute;
+        width: var(--percent100);
+        height: auto;
+        top: auto;
+        left: 0;
+        right: 0;
+        padding: 2.5em;
+        line-height: 2em;
+        background-color: var(--light-bg-color);
+        box-shadow: rgb(0 0 0 / 20%) 0 30px 20px -30px;
+        z-index: 100;
+
+        display: none;
+    }
+    nav li.has-child:hover .mega{
+        display: block;
+    }
+    nav .mega .wrapper {
+        display: flex;
+    }
+    nav .mega h4{
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+    nav .mega ul {
+        font-size: var(--font-small);
+    }
+   nav .mega .women-brands{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 180px;
+   }
+   nav .mega .women-brands li{
+        min-width: 80px;
+   }
+   nav .mega .view-all{
+    margin-top: 1em;
+   }
+   nav .mega .products{
+    flex: 2;
+    padding: 0;
+    align-items: center;
+    position: relative;
+   }
+   nav .mega .products .row{
+   width: var(--percent100);
+   }
+   nav .mega .products .media{
+     width: 400px;
+    }
+    nav .mega .products .text-content{
+        line-height: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 0.5em;
+        position: absolute;
+        bottom: 4em;
+        width: var(--percent100);
+    }
+    nav .mega .products .text-content h4 {
+        font-size: 2em;
+        font-weight: var(--fw8);
+        text-align: center;
+        color:var(--secondary-dark-color) ;
+    }
+    .slider > div > .wrapper{
+        width: calc(100% - (300px + 2em));
+        margin-left: auto
+    }
+
+    /* product trending */
+    .trending .products{
+        flex: 0 0 33.3333%;
+    }
+    .products.big .media{
+        max-height: 373px;
+    }
+    .products.mini {
+        flex: 0 0 25%;
+    }
+    .products.main .item{
+        flex: 0 0  20%;
+    }
+   /* slider */
+   .slider > div > .wrapper{
+    width: 100%;
+    margin-left: auto;
+ }
+
+}
+
+
+

@@ -1,0 +1,9 @@
+<div class="container">
+  <form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+    <input type="text" formControlName="name" placeholder="Tên sản phẩm" />
+    <input type="number" formControlName="price" placeholder="Giá sản phẩm" />
+    <textarea type="text" formControlName="description" style="width: 200px; height: 200px; margin-top: 50px;"></textarea>
+    <input type="file" formControlName="imgUrl" />
+    <button>Cập nhật sản phẩm</button>
+  </form>
+</div>

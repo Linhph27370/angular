@@ -1,0 +1,8 @@
+<div class="container">
+    <form [formGroup]="userForm" (ngSubmit)="onHandleSubmit()">
+      <input type="text" formControlName="username" />
+      <input type="text" formControlName="email" />
+      <input type="text" formControlName="password" />
+      <button type="submit">Thêm</button>
+    </form>
+  </div>

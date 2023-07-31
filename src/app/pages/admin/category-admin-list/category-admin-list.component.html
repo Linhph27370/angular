@@ -1,0 +1,24 @@
+<a class="btn btn-primary" routerLink="/admin/category-create">Create New</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" style="text-align: center;">STT</th>
+      <th scope="col" style="text-align: center;">Name</th>
+
+      <th scope="col" style="text-align: center;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categorys; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ category.name }}</td>
+
+      
+      <td style="display: flex;">
+        
+        <button class="btn btn-danger" (click)="delete(category.id!)">Xóa</button>
+        <a style="width: 74px; padding-top: 20px; margin-left: 20px;" class="btn btn-success" [routerLink]="'/admin/category-update/' + category.id">Update</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
